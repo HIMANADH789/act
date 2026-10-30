@@ -1,0 +1,81 @@
+# Byte-compiled / optimized / virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.pytest_cache/
+.freebuff/
+*.egg-info/
+*.safetensors
+*.bin
+
+# Data and execution runs
+data/
+runs/
+
+# Strictly exclude non-V5 code versions
+src/act_tsfm_v2/
+src/act_tsfm_v6/
+src/act_tsfm/v1/
+src/act_tsfm/v3/
+src/act_tsfm/performance_map.py
+
+# Strictly exclude non-V5 results
+results/v2/
+results/v6/
+results/audit/
+results/audit_v1/
+results/final_audit/
+results/final_report/
+results/logs/
+results/manifests/
+results/tables/
+results/figures/
+results/report.md
+results/summary.txt
+
+# Strictly exclude non-V5 scripts
+scripts/*v1*.py
+scripts/*v2*.py
+scripts/*v3*.py
+scripts/*v4*.py
+scripts/*v6*.py
+scripts/*audit*.py
+scripts/assemble_v2.py
+scripts/compare_v1_v2.py
+scripts/compute_oracle_headroom.py
+scripts/generate_audited_report.py
+scripts/generate_v2_report.py
+scripts/generate_v6_figures.py
+scripts/profile_v2.py
+scripts/rebuild_map_diagnostics.py
+scripts/record_checkpoints.py
+scripts/run.py
+scripts/run_all_experiments.py
+scripts/run_asset_subsets.py
+scripts/run_parallel_policies.py
+scripts/suggest_next_evaluations.py
+scripts/validate_results.py
+scripts/validate_v2.py
+scripts/validate_v6_math.py
+
+# Strictly exclude non-V5 tests
+tests/v2/
+tests/test_v1_v3_v4.py
+tests/test_final_audit_artifacts.py
+
+# Strictly exclude non-V5 documentation and prompts
+configs/v2_experiment.yaml
+ACT_TSFM_V6_MASTER_PROMPT.md
+README_V2.md
+
+# Strictly exclude old raw artifacts
+artifacts/observed_losses/
+artifacts/oracle_reference/
+
+# Retain artifacts for V5 reproducibility
+!artifacts/
+!artifacts/checkpoints/
+!artifacts/checkpoints/v4_pretrained.pt
+!artifacts/reference/
+!artifacts/reference/**

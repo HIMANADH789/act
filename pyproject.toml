@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "act-tsfm"
+version = "0.1.0"
+description = "Bayesian cost-aware active financial model evaluation research prototype"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "matplotlib", "pyyaml", "yfinance", "psutil"]
+[project.scripts]
+act-tsfm = "act_tsfm.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]

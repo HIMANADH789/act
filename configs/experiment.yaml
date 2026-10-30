@@ -1,0 +1,22 @@
+tickers: [SPY, QQQ, IWM, TLT, GLD, USO, XLF, XLK]
+start: '2010-01-01'
+end: '2026-01-01'
+horizons: [1, 5]
+folds:
+  - [2016, 2018, 2020]
+  - [2018, 2020, 2022]
+  - [2020, 2022, 2025]
+policy_seeds: [42,43,44,45,46,47,48,49,50,51]
+training_seeds: [42,43,44]
+budgets: [0.1,0.2,0.4,0.6,0.8]
+windows_per_asset_cell: 4
+minimum_cell_samples: 6
+context: 256
+posterior_draws: 128
+fantasies: 12
+batch_sizes: [1,5]
+confidence: 0.95
+device: cuda
+matmul_precision: high
+timesfm_flip_invariance: false
+foundation_models: true

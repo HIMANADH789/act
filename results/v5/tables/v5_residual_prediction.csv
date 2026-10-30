@@ -1,0 +1,4 @@
+regime,pair,n_windows,r2_oos,var_reduction_pct
+calm,garch_vs_har,60,-0.034185480186940564,0.0
+normal,garch_vs_har,108,-0.018778853891000313,0.0
+stress,garch_vs_har,90,-0.022598112964057115,0.0

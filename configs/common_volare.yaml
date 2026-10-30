@@ -1,0 +1,56 @@
+dataset:
+  name: "VOLARE"
+  source_url: "https://volare.unime.it"
+  rv_field: "rv5"
+  horizons: [1, 5, 22]
+  assets:
+    stocks:
+      - symbol: "AAPL"
+        category: "Equities"
+      - symbol: "MSFT"
+        category: "Equities"
+      - symbol: "JPM"
+        category: "Equities"
+      - symbol: "XOM"
+        category: "Equities"
+    futures:
+      - symbol: "ES"
+        category: "Futures_Index"
+      - symbol: "CL"
+        category: "Futures_Commodity"
+      - symbol: "GC"
+        category: "Futures_Commodity"
+    forex:
+      - symbol: "EURUSD"
+        category: "Forex"
+      - symbol: "GBPUSD"
+        category: "Forex"
+      - symbol: "USDJPY"
+        category: "Forex"
+
+partitions:
+  development_end: "2023-12-31"
+  commissioning_start: "2024-01-01"
+  commissioning_end: "2025-12-31"
+  holdout_start: "2026-01-01"
+  holdout_end: "2026-06-30"
+  purge_days: 22
+
+regimes:
+  count: 3
+  labels: ["calm", "normal", "stress"]
+  metric: "rv5"
+
+forecasting_models:
+  - "har"
+  - "garch"
+  - "chronos"
+  - "timesfm"
+
+simulation:
+  policy_seeds: [42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+  v4_pretrain_seeds: [42, 43, 44]
+  budgets: [0.10, 0.20, 0.40, 0.60, 0.80]
+  confidence: 0.95
+  device: "cuda"
+
